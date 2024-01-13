@@ -9,7 +9,6 @@ import (
 type TransactionResponse struct {
 	Amount                 uint64                       `json:"amount,omitempty"`
 	Authorization          *Authorization               `json:"authorization,omitempty"`
-	AuthorizationCode      string                       `json:"authorizationCode,omitempty"`
 	Brand                  *Brand                       `json:"brand,omitempty"`
 	BrandTid               string                       `json:"brandTid,omitempty"`
 	CancelId               string                       `json:"cancelId,omitempty"`

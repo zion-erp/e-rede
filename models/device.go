@@ -3,7 +3,7 @@ package models
 type Device struct {
 	ColorDepth     uint16 `json:"colorDepth,omitempty"`
 	DeviceType3ds  string `json:"deviceType3ds,omitempty"`
-	JavaEnabled    bool   `json:"javaEnabled,omitempty"`
+	JavaEnabled    bool   `json:"javaEnabled"`
 	Language       string `json:"language,omitempty"` //"BR"
 	ScreenHeight   uint16 `json:"screenHeight,omitempty"`
 	ScreenWidth    uint16 `json:"screenWidth,omitempty"`

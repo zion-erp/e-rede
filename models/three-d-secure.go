@@ -14,7 +14,7 @@ type ThreeDSecure struct {
 	OnFailure                    enums.ThreeDSecureOnFailureAction     `json:"onFailure,omitempty"` // DeclineOnFailure;
 	ReturnCode                   string                                `json:"returnCode,omitempty"`
 	ReturnMessage                string                                `json:"returnMessage,omitempty"`
-	ThreeDIndicator              string                                `json:"threeDIndicator,omitempty"`
+	ThreeDIndicator              uint64                                `json:"threeDIndicator,omitempty"`
 	Url                          string                                `json:"url,omitempty"`
 	UserAgent                    string                                `json:"userAgent,omitempty"`
 	Xid                          string                                `json:"xid,omitempty"`

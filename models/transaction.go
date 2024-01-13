@@ -19,7 +19,7 @@ type Transaction struct {
 	ConsumerBillPaymentService     *ConsumerBillPaymentService  `json:"consumerBillPaymentService,omitempty"`
 	CredentialId                   string                       `json:"credentialId,omitempty"`
 	DateTime                       string                       `json:"dateTime,omitempty"`
-	DistributorAffiliation         uint64                       `json:"distributorAffiliation,omitempty"`
+	DistributorAffiliation         uint64                       `json:"distributorAffiliation,omitempty"` // Número de filiação do distribuidor (PV).
 	ExpirationMonth                string                       `json:"expirationMonth,omitempty"`
 	ExpirationYear                 string                       `json:"expirationYear,omitempty"`
 	Iata                           *Iata                        `json:"iata,omitempty"`

@@ -8,13 +8,14 @@ import (
 
 type Authorization struct {
 	Affiliation            uint64                    `json:"affiliation,omitempty"`
+	Brand                  *Brand                    `json:"brand,omitempty"`
 	Amount                 uint64                    `json:"amount,omitempty"`
 	AuthorizationCode      string                    `json:"authorizationCode,omitempty"`
 	CardBin                string                    `json:"cardBin,omitempty"`
 	CardHolderName         string                    `json:"cardHolderName,omitempty"`
 	DateTime               *time.Time                `json:"dateTime,omitempty"`
-	DistributorAffiliation uint64                    `json:"distributorAffiliation,omitempty"`
-	Installments           uint8                     `json:"installments,omitempty"` // max 12
+	DistributorAffiliation uint64                    `json:"distributorAffiliation,omitempty"` // Número de filiação do distribuidor (PV).
+	Installments           uint8                     `json:"installments,omitempty"`           // max 12
 	Kind                   string                    `json:"kind,omitempty"`
 	Last4                  string                    `json:"last4,omitempty"`
 	Nsu                    string                    `json:"nsu,omitempty"`
