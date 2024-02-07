@@ -146,3 +146,22 @@ func (s *TestERedeClient) TestCaptureTransaction(tid string, amount float64) {
 
 	fmt.Printf("%+v\n", transaction)
 }
+
+func (s *TestERedeClient) TestTokenizeCard() {
+	cl := s.NewTestClient()
+	card, resp := cl.CreateTokenization(&models.CreateTokenization{
+		CardholderName:  "John Snow",
+		CardNumber:      "4895370010000005",
+		Email:           "john_snow@gmail.com",
+		ExpirationMonth: "02",
+		ExpirationYear:  "2028",
+		SecurityCode:    "235",
+		StorageCard:     enums.TransactionCardStorage_CredentialNotStored,
+	})
+
+	if resp.Error != nil {
+		cl.log.Debug(resp.Error.Error())
+	}
+
+	fmt.Printf("%+v\n", card)
+}

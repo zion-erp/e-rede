@@ -166,7 +166,7 @@ func (s *ERedeClient) GetCryptogramByTokenizationId(tokenizationId *uuid.UUID, s
 }
 
 func (c *ERedeClient) CreateTokenization(tokenization *models.CreateTokenization) (*models.CreateTokenizationResponse, *Response) {
-	url := fmt.Sprintf("%s/tokenization", c.Config.ApiUrl)
+	url := fmt.Sprintf("%s/tokenization", c.Config.ApiTokenization)
 
 	response := c.Post(url, tokenization)
 
